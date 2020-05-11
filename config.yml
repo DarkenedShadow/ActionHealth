@@ -6,7 +6,7 @@
 # {displayname} will use player/mob custom name.
 # {opponentlastdamage} the amount of damage the enemy last received.
 # Has support for PlaceholderAPI and MVdWPlaceholderAPI.
-Health Message: '&7&l{name}: {usestyle}'
+Health Message: '&7&l{name}: &a&l{health} / {maxhealth}'
 
 # If set empty it will default to the one above.
 # This message is sent to all non player entities.
@@ -41,7 +41,7 @@ Show Player: true
 Show NPC: true
 
 # If set to true player will get the message in a delay to get 100% accurate health. Useful for plugins that add damage by reading item lore.
-Delay Message: false
+Delay Message: true
 # Amount delayed by
 Delay Tick: 1
 
@@ -58,7 +58,7 @@ Disabled regions:
   - testing_region
 
 # Disable ActionHealth in regions where PvP is denied.
-Region PvP: true
+Region PvP: false
 
 # Limits the health style to a certain amount of symbols.
 Limit Health: 10
@@ -78,11 +78,11 @@ Whitelist: []
 
 # Show the health of the entity that the player is looking at.
 Show On Look: true
-Look Distance: 10
+Look Distance: 15
 
 LookValues:
   # How often (in ticks) to check if player is looking at an entity. Increase if lagging, maybe to 10 or 20.
-  CheckTicks: 0
+  CheckTicks: 5
   # If the dot product is positive, the target is in front
   Dot: 0
   # Tolerance of the line calculation
